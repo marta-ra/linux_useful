@@ -1,0 +1,37 @@
+There is ~/.ssh/config file for work with multiple git accounts
+
+"""
+
+#user1 account
+ Host bitbucket.org-user1
+     HostName bitbucket.org
+     User git
+     IdentityFile ~/.ssh/user1_rsa
+     IdentitiesOnly yes
+
+#user2 account
+Host bitbucket.org-user2
+    HostName bitbucket.org
+    User git
+    IdentityFile ~/.ssh/user1_rsa
+    IdentitiesOnly yes
+
+#user3
+Host github.com
+    HostName github.com
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/user3_rsa
+
+"""
+
+Then enter:
+$ ssh-add ~/.ssh/id_rsa_work
+
+
+Test connection:
+$ ssh -T git@github.com
+Hi MartaRazumeychik! You've successfully authenticated, but GitHub does not provide shell access.
+
+Also can check list identity fingerprints by running:
+$ ssh-add -l
