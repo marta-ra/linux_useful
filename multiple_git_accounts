@@ -31,7 +31,7 @@ $ ssh-add ~/.ssh/id_rsa_work
 
 Test connection:
 $ ssh -T git@github.com
-Hi MartaRazumeychik! You've successfully authenticated, but GitHub does not provide shell access.
+Hi Marta! You've successfully authenticated, but GitHub does not provide shell access.
 
 Also can check list identity fingerprints by running:
 $ ssh-add -l
